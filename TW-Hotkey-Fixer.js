@@ -20,11 +20,11 @@ if (location.href.match(/(nl|zz|en).*\.tribalwars\.(nl|net)\/game\.php(\?|.*\&)s
         console.log("Handler for .keydown() called.");
         if (e.which == 65) {
             console.log("a");
-            var direction = $("#village_switch_right").attr("href");
+            var direction = $("#village_switch_left").attr("href");
             document.location.replace(direction);
         } else if (e.which == 68) {
             console.log("d");
-            var direction = $("#village_switch_left").attr("href");
+            var direction = $("#village_switch_right").attr("href");
             document.location.replace(direction);
         } else if (e.which == 83) {
             console.log("s");
