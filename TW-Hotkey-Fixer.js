@@ -7,7 +7,7 @@
 // ==/UserScript==
 
 /** LICENCE:
- * TW Hotkey-fixer v0.1 © 2016 MagicLegend
+ * TW Hotkey-fixer v0.1 Â© 2016 MagicLegend
  * This work is under the Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) Licence.
  * More info can be found here: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en (Human readable, not the actual licence) & https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode (Actual licence)
  *
@@ -25,6 +25,12 @@ if (location.href.match(/(nl|zz|en).*\.tribalwars\.(nl|net)\/game\.php(\?|.*\&)s
             console.log("d");
             var direction = $("#village_switch_left").attr("href");
             document.location.replace(direction);
+        } else if (e.which == 83) {
+            console.log("s");
+            window.scrollTo(0,document.body.scrollHeight);
+        } else if (e.which == 87) {
+            console.log("w");
+            window.scrollTo(0, 0);
         };
     });
 };
