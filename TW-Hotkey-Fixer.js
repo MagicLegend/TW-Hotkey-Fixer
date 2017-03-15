@@ -1,17 +1,18 @@
 // ==UserScript==
 // @name         TW Hotkey-fixer
-// @version      0.1
+// @version      0.2
 // @description  Fixes the behaviour of the TW hotkeys when on the recruiting pages
 // @author       MagicLegend
 // @include      https://*.tribalwars.*/game.php*
 // ==/UserScript==
 
 /** LICENCE:
- * TW Hotkey-fixer v0.1 © 2016 MagicLegend
+ * TW Hotkey-fixer v0.2 © 2016 MagicLegend
  * This work is under the Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) Licence.
  * More info can be found here: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en (Human readable, not the actual licence) & https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode (Actual licence)
  *
  * v0.1		Initial work, first working version
+ * v0.2     Added scrolling to the w and s buttons
  */
 
 if (location.href.match(/(nl|zz|en).*\.tribalwars\.(nl|net)\/game\.php(\?|.*\&)screen\=train(\?|.*\&)mode\=train/)) {
