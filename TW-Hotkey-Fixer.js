@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         TW Hotkey-fixer
-// @version      0.2
+// @version      0.3
 // @description  Fixes the behaviour of the TW hotkeys when on the recruiting pages
 // @author       MagicLegend
 // @include      https://*.tribalwars.*/game.php*
@@ -13,25 +13,41 @@
  *
  * v0.1		Initial work, first working version
  * v0.2     Added scrolling to the w and s buttons
+ * v0.3     Added a backspace function to the numpad .
  */
 
 if (location.href.match(/(nl|zz|en).*\.tribalwars\.(nl|net)\/game\.php(\?|.*\&)screen\=train(\?|.*\&)mode\=train/)) {
     $(".vis").keydown(function (e) {
         console.log("Handler for .keydown() called.");
-        if (e.which == 65) {
-            console.log("a");
-            var direction = $("#village_switch_left").attr("href");
-            document.location.replace(direction);
-        } else if (e.which == 68) {
-            console.log("d");
-            var direction = $("#village_switch_right").attr("href");
-            document.location.replace(direction);
-        } else if (e.which == 83) {
-            console.log("s");
-            window.scrollTo(0,document.body.scrollHeight);
-        } else if (e.which == 87) {
-            console.log("w");
-            window.scrollTo(0, 0);
-        };
+        switch(e.which) {
+            case 65:
+                console.log("a");
+                var direction = $("#village_switch_left").attr("href");
+                document.location.replace(direction);
+            break;
+            case 68:
+                console.log("d");
+                var direction = $("#village_switch_right").attr("href");
+                document.location.replace(direction);
+            break;
+            case 83:
+                console.log("s");
+                window.scrollTo(0,document.body.scrollHeight);
+                break;
+            case 87:
+                console.log("w");
+                window.scrollTo(0, 0);
+                break;
+            case 110:
+                setTimeout(
+                    function() {
+                        $('input:focus').val(
+                            function(index, value){
+                                return value.substr(0, value.length - 2);
+                            }
+                        );
+                    }, 20);
+                break;
+        }
     });
-};
+}
