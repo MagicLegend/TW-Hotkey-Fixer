@@ -7,7 +7,7 @@
 // ==/UserScript==
 
 /** LICENCE:
- * TW Hotkey-fixer v0.2 © 2016 MagicLegend
+ * TW Hotkey-fixer v0.4 © 2016 MagicLegend
  * This work is under the Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) Licence.
  * More info can be found here: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en (Human readable, not the actual licence) & https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode (Actual licence)
  *
